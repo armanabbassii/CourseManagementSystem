@@ -1,16 +1,28 @@
 package model;
 
+import java.text.DecimalFormat;
+
 public class Student {
+    private int student_id;
     private String name;
     private String major;
     private int year;
-    private String gpa;
+    private double gpa;
 
-    public Student(String name, String major, int year, String gpa) {
+    public Student(int student_id,String  name, String major, int year, double gpa) {
         this.name = name;
         this.major = major;
         this.year = year;
         this.gpa = gpa;
+    }
+
+
+    public int getStudent_id() {
+        return student_id;
+    }
+
+    public void setStudent_id(int student_id) {
+        this.student_id = student_id;
     }
 
     public String getName() {
@@ -37,22 +49,28 @@ public class Student {
         this.major = major;
     }
 
-    public String getGpa() {
+    public double getGpa() {
         return gpa;
     }
 
-    public void setGpa(String gpa) {
+    public void setGpa(double gpa) {
         this.gpa = gpa;
     }
+
 
     @Override
     public String toString() {
         return "Student{" +
-                "name='" + name + '\'' +
+                "student_id=" + student_id +
+                ", name='" + name + '\'' +
                 ", major='" + major + '\'' +
                 ", year=" + year +
-                ", gpa='" + gpa + '\'' +
+                ", gpa=" + gpa +
                 '}';
+    }
+
+    public int getId() {
+        return 0;
     }
 }
 
